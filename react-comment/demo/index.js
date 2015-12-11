@@ -3,6 +3,7 @@ var data = [
   {author: "Jordan Walke", text: "This is *another* comment"}
 ];
 
+// 务必 把 key 添加到子级数组里组件本身上，而不是每个子级内部最外层 HTML 上
 var CommentList = React.createClass({
   render: function () {
     var commmentNodes = this.props.data.map(function (item, index) {
@@ -36,6 +37,7 @@ var Comment = React.createClass({
   }
 });
 
+// 通过 this.refs 引用 DOM 节点
 var CommentForm = React.createClass({
   handleSubmit: function (e) {
     e.preventDefault();
@@ -53,7 +55,7 @@ var CommentForm = React.createClass({
   render: function () {
     return (
       <form className="commentForm" onSubmit={this.handleSubmit}>
-        <input type="text" placeholder="Your name" ref="author" />
+        <input type="text" id="test111" placeholder="Your name" ref="author" defaultValue="yun" />
         <input type="text" placeholder="Say something..." ref="text" />
         <input type="submit" value="Post" />
       </form>

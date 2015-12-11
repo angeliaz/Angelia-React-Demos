@@ -28,6 +28,7 @@ app.get('/api/comments', function(req, res) {
   fs.readFile(COMMENTS_FILE, function(err, data) {
     if (err) {
       console.error(err);
+      // process.exit方法用来退出当前进程，它可以接受一个数值参数。如果参数大于0，表示执行失败；如果等于0表示执行成功。
       process.exit(1);
     }
     res.setHeader('Cache-Control', 'no-cache');

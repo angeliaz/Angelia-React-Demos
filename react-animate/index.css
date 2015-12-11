@@ -1,0 +1,37 @@
+.demo-item {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    text-align: center;
+    line-height: 100px;
+    font-size: 20px;
+    transition: all .5s;
+    -webkit-transition: all .5s;
+}
+.animate-wrapper {
+    width: 300px;
+    height: 100px;
+    position: relative;
+    display: block;
+}
+
+.demo-enter {
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    margin-left: 100px;
+    opacity: 0;
+}
+.demo-leave {
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    margin-left: 0;
+    opacity: 1;
+}
+.demo-enter.demo-enter-active {
+    margin-left: 0;
+    opacity: 1;
+}
+.demo-leave.demo-leave-active {
+    margin-left: -100px;
+    opacity: 0;
+}
